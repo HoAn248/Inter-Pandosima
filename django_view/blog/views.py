@@ -1,4 +1,4 @@
-# import datetime
+import datetime
 from django.http import HttpResponse, HttpResponseNotFound
 
 from blog.models import Blog
@@ -29,3 +29,9 @@ def detail(request):
     except Blog.DoesNotExist:
         raise Http404("Poll does not exist")
     return render(request, "blog/detail.html", {"poll": p})
+
+
+async def current_datetime(request):
+    now = datetime.datetime.now()
+    html = "<html><body>It is now %s.</body></html>" % now
+    return HttpResponse(html)
