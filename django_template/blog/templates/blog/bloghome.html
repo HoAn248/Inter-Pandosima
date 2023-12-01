@@ -1,4 +1,8 @@
+
+
 {% extends "blog\layout.html" %}
+{% load static %}
+{% load humanize %}
 
 {% block title %}
 Title của phần Blog Home
@@ -6,4 +10,6 @@ Title của phần Blog Home
 
 {% block main %}
 Main của phần Blog Home
+<br>
+<img src="{% static 'images/bug.png' %}" alt="Hi!">
 {% endblock %}
