@@ -19,6 +19,8 @@
         <a :href="url">Dẫn đến GG</a>
         <p>{{price}}</p>
         <p>{{formatPrice()}}</p>
+        <p>Đếm: {{count}}</p>
+        <button v-on:click="handleClick($event,5)">Click add +1</button>
     </div>
     <footer><h2>Footer</h2></footer>
 </body>
