@@ -1,7 +1,12 @@
 var vueInstance = new Vue({
     el: '#app',
     data: {
-        title: 'SamSung'
+        title: 'test instance VueJS'
+    },
+    methods: {
+        say: function(text){
+            return 'Hello, ' + text
+        }
     }
 })
 
